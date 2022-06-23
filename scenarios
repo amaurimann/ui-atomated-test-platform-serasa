@@ -1,0 +1,71 @@
+/**
+* @author Amauri.mann
+
+ * Platform Serasa - Create Account, Login, Navigation and Hire Plans(Serasa Premium).
+ *
+ * Objective of this file
+ *
+ * Implement the tests scenarios below in to UI by Automated Tests to assurance quality of primordial functional of components of [serasa-platform] in production environments.
+ *
+ * The Test scenarios are subject to change
+ *
+ * Scenarios:
+ *
+ * create account: 'New account created successfully.
+ -click enter button
+ -click create account
+ -input cpf
+ -input name
+ -input birth date
+ -input email
+ -input password
+ -submit
+ -A_createAccount() {
+ 		loginRules.createAccount(cpf, nome, dataNascimento, email, senha);
+ 	}
+
+ * login : 'Successfully login in platform'
+ -click enter button
+ -input cpf
+ -submit
+ -B_loginSite() throws InterruptedException{
+ 		loginRules.loginSite(cpf);
+ 	}
+
+ * navigation to validate consult cpf redirect link
+ -click consult cpf button
+ -input cpf
+ -submit
+ -C_consultCpf();
+
+ * navigation to validate ecred redirection link
+ -click o que voce precisa modal button
+ -click ecred submenu button
+ -click ecred simule gratis button
+ -input cpf
+ -submit
+ -D_accessEcred();
+
+ * navigation to validate Limpa Nome redirect link
+ -click o que voce precisa modal button
+ -click Limpa Nome submenu button
+ -E_accessLimpaNome();
+
+ ** NOTE:
+ In the study of mapping features and services of the serasa.com.br platform, several products and critical features of the system were identified.
+ Features were mapped and identified as the main features: account creation, login, cpf query, clear my name, check score score, how to boost your serasa score, request an online loan and credit card.
+ When performing automated account creation and login tests, the platform reports an error during the completion of the process (probably the system identifies that it is being accessed by a robot and blocks the service).
+ This problem of access and account creation directed the tests for product services that do not require login (hiring serasa premium and navigation within the platform).
+
+ * TO DO - Improvements:
+ *
+ * Refactor code to add asserts in the end of tests and create more tests.
+ *
+ * To frontEnd Developers: (add TestId to facilitate “browser/browserStack/maven” navigation).
+ *
+ * In step3 of premium contracting, if the user does not complete the purchase, an email is sent to the user to complete the contracting process. Validate sending email in test integrated with email.
+ *
+ * Execute all scenarios in BrowserStack and integrate with Jenkins.
+ *
+ * Prepare “Regression.test Suite” to validate integrity of components already tested after merge.
+ */
